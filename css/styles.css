@@ -21,32 +21,61 @@ body {
     color: var(--title-text-color);
     background-color: var(--hero-text-color);
 }
+p, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+ul,
+ol{
+    padding-left: 0;
+    margin: 0;
+}
+img{
+    display: block;
+    height: auto;
+    width: 100%;
+    
+}
 .link{
     text-decoration: none;
 }
 .list{
     list-style: none;
 }
-.header-mail{
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color)
+.container{
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    outline: 1px solid yellow;
 }
-.header-tel{
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color)
-}
+
+
+
 /* шапка*/
+.header-navigation{
+    display: flex;
+    align-items: center;
+}
+.header .container{
+    display: flex;
+    align-items: center;
+}
 .header-logo{
+    padding-top: 24px;
+    padding-bottom: 25px;
     font-family: Raleway,sans-serif;
     color: var(--accent-color);
     font-weight: 700;
     font-size: 26px;
     font-style: normal;
     line-height: 1.19;
+  
 }
 .studio{
     color: var(--title-text-color);
@@ -60,6 +89,47 @@ body {
 .header-link:hover,
 .header-link:focus{
     color: var(--accent-color);
+}
+
+.header-list{
+    display: flex;
+    align-items: center;
+}
+.header-list .link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.header-list .header-item:first-child{
+    margin-left: 94px;
+}
+
+.header-list .header-item:not(:last-child){
+    margin-right: 50px;
+}
+.header-contact{
+    margin-left: auto;
+    display: flex;
+}
+.header-contact .item + .item{
+    margin-left: 50px;
+}
+.header-nav{
+    display: flex;
+    align-items: center;
+}
+
+.header-mail{
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+}
+.header-tel{
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
 }
 .header-mail:hover,
 .header-mail:focus{
@@ -76,6 +146,7 @@ color: var(--accent-color);
 /*герой*/
 .hero{
     background-color: var(--background-color);
+    text-align: center;
 }
 .hero-title{
     font-weight: 900;
@@ -85,8 +156,14 @@ color: var(--accent-color);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--hero-text-color);
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 .hero-btn{
+    display: inline-block;
+    border-radius: 4px;
+    border:1px solid transparent;
+    padding: 10px 32px;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -96,6 +173,7 @@ color: var(--accent-color);
     color:var(--hero-text-color);
     background-color: var(--accent-color);
     cursor: pointer;
+    
 }
 .hero-btn:hover, 
 .hero-btn:focus{
@@ -114,12 +192,26 @@ color: var(--accent-color);
      clip-path: inset(50%);
      margin: -1px;
  }
-
+ .specifics-list{
+     display: flex;
+ }
+ .specifics-section{
+     margin-top: 0;
+     padding: 94px 0 94px 0;
+ }
+ .specifics-list > .specifics-item:not(:first-child){
+     margin-left: 30px;
+ }
+ .specifics-item{
+     width: 270px;
+ }
  .specifics-title{
     font-weight: 700;
+    font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--title-text-color);
+    margin-bottom: 10px;
  }
  .specifics-text{
     font-weight: 400;
@@ -127,17 +219,34 @@ color: var(--accent-color);
     color: var(--primary-text-color);
  }
  /*чим займаємось*/
+ .about-section{
+     margin-top: 0;
+     padding: 0 0 94px 0;
+ }
  .about-title{
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     color: var(--title-text-color);
+    margin-bottom: 50px;
  }
-
+.about-list{
+    display: flex;
+}
+.about-list > .about-item:not(:first-child){
+    margin-left: 30px;
+}
  /*команда*/
- .team{
-     background-color: var(--background-team-color);
+  .team{
+    background-color: var(--background-team-color);
+ }
+ .team-list > .team-item:not(:first-child){
+     margin-left: 30px;
+ }
+ .team-section{
+     margin-top: 0;
+     padding:  94px 0  94px 0;
  }
  .team-main-title{
     font-weight: 700;
@@ -151,15 +260,25 @@ color: var(--accent-color);
     font-size: 16px;
     line-height: 1.19;
     color: var(--title-text-color);
+    text-align: center;
+    margin-bottom: 10px;
  }
-
  .team-text{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
     color: var(--primary-text-color);
+    text-align: center;
  }
- 
+ .name-team{
+     padding: 30px 0 30px 0;
+ }
+ .team-img{
+     margin-bottom: 30px;
+ }
+ .team-list{
+     display: flex;
+ }
  /*Підвал*/
  .footer{
     background-color: var(--background-color);
@@ -219,6 +338,7 @@ color: var(--accent-color);
 .portfolio-btn:hover, 
 .portfolio-btn:focus{
     background-color: var(--accent-color);
+    color: var(--hero-text-color);
 }
 .portfolio-title{
     font-weight: 700;
@@ -232,4 +352,46 @@ color: var(--accent-color);
     font-size: 16px;
     line-height: 1.87;
     color: var(--primary-text-color);
+}
+.portfolio-filter-list{
+    display: flex;
+    padding: 94px 0 34px 0;
+}
+.portfolio-filter-list .portfolio-filter-item:not(:last-child){
+    margin-right: 8px;
+}
+.portfolio-filter-list .portfolio-filter-item:first-child{
+    margin-left: 495px;
+}
+.portfolio-filter-item{
+    display: flex;
+    align-items: center;
+}
+.portfolio-list{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+ .portfolio-item {
+    width: calc((100% - 60px) / 3);
+    margin-left: 30px;
+    margin-bottom: 30px; 
+    border: 1px solid var(--container-border-color);
+}
+.portfolio-item:nth-child(3n+1){
+    margin-left: 0;
+}
+.portfolio-item:nth-last-child(-n+3){
+    margin-bottom: 0;
+}
+.portfolio{
+    margin-top: 0;
+    margin-bottom: 94px;
+}
+.portfolio-section{
+    padding: 20px 24px;
+}
+.line-portfolio{
+    border: 1px solid var(--border-color);
 }
