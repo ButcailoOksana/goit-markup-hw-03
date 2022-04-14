@@ -356,12 +356,10 @@ color: var(--accent-color);
 .portfolio-filter-list{
     display: flex;
     padding: 94px 0 34px 0;
+    justify-content: center;
 }
 .portfolio-filter-list .portfolio-filter-item:not(:last-child){
     margin-right: 8px;
-}
-.portfolio-filter-list .portfolio-filter-item:first-child{
-    margin-left: 495px;
 }
 .portfolio-filter-item{
     display: flex;
