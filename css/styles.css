@@ -30,11 +30,9 @@ h5,
 h6 {
     margin: 0;
 }
-ul,
-ol{
-    padding-left: 0;
-    margin: 0;
-}
+
+    
+
 img{
     display: block;
     height: auto;
@@ -46,6 +44,8 @@ img{
 }
 .list{
     list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 .container{
     width: 1200px;
@@ -197,7 +197,8 @@ color: var(--accent-color);
  }
  .specifics-section{
      margin-top: 0;
-     padding: 94px 0 94px 0;
+     padding-top: 94px;
+     padding-bottom: 94px;
  }
  .specifics-list > .specifics-item:not(:first-child){
      margin-left: 30px;
@@ -246,7 +247,8 @@ color: var(--accent-color);
  }
  .team-section{
      margin-top: 0;
-     padding:  94px 0  94px 0;
+     padding-top: 94px;
+     padding-bottom: 94px;
  }
  .team-main-title{
     font-weight: 700;
@@ -254,6 +256,7 @@ color: var(--accent-color);
     line-height: 1.17;
     text-align: center;
     color: var(--title-text-color);
+    margin-bottom: 50px;
  }
  .team-title{
     font-weight: 500;
@@ -273,8 +276,8 @@ color: var(--accent-color);
  .name-team{
      padding: 30px 0 30px 0;
  }
- .team-img{
-     margin-bottom: 30px;
+ .team-item{
+     background-color: var(--hero-text-color);
  }
  .team-list{
      display: flex;
@@ -282,6 +285,8 @@ color: var(--accent-color);
  /*Підвал*/
  .footer{
     background-color: var(--background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
  }
  .footer-logo{
     font-family: 'Raleway',sans-serif;
@@ -289,6 +294,8 @@ color: var(--accent-color);
     font-size: 26px;
     line-height: 1.19;
     color: var(--accent-color);
+    display: inline-block;
+    margin-bottom: 20px;
  }
  .footer-studio{
      color: var(--hero-text-color);
@@ -319,6 +326,10 @@ color: var(--accent-color);
  .footer-mail:focus{
      color: var(--hero-text-color);
  }
+ .footer-list > .footer-item:not(:last-child){
+     margin-bottom: 9px;
+ }
+
 
  /*Портфоліо*/
 .portfolio-btn{
@@ -330,6 +341,10 @@ color: var(--accent-color);
     color: var(--title-text-color);
     cursor: pointer;
     background-color: var(--background-team-color);
+    border: 0 solid transparent;
+    padding: 6px 22px;
+    
+    
 }
 .btn{
     color: var(--hero-text-color);
@@ -355,8 +370,8 @@ color: var(--accent-color);
 }
 .portfolio-filter-list{
     display: flex;
-    padding: 94px 0 34px 0;
     justify-content: center;
+    margin-bottom: 50px;
 }
 .portfolio-filter-list .portfolio-filter-item:not(:last-child){
     margin-right: 8px;
@@ -375,7 +390,7 @@ color: var(--accent-color);
     width: calc((100% - 60px) / 3);
     margin-left: 30px;
     margin-bottom: 30px; 
-    border: 1px solid var(--container-border-color);
+    
 }
 .portfolio-item:nth-child(3n+1){
     margin-left: 0;
@@ -384,11 +399,12 @@ color: var(--accent-color);
     margin-bottom: 0;
 }
 .portfolio{
-    margin-top: 0;
-    margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .portfolio-section{
     padding: 20px 24px;
+    border: 1px solid var(--container-border-color);
 }
 .line-portfolio{
     border: 1px solid var(--border-color);
